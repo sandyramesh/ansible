@@ -1,8 +1,9 @@
 ---
 - name: debug module damo
   hosts: all
-
+  vars:
+    fruit: "apple"
   tasks: 
     - name: print message
       ansible.builtin.debug:
-        msg: "Hello World"
+        var: fruit
