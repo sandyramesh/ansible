@@ -9,4 +9,4 @@
 
     - name: print uptime
       ansible.builtin.debug:
-        msg: command_output.stdout_lines
+        var: command_output.stdout_lines
