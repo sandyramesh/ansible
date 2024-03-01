@@ -1,0 +1,14 @@
+--- 
+- name: tags demo.
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: example 1
+      ansible.builtin.debug:
+        msg: "example1"
+      tags: tag1
+    - name: example 2
+      ansible.builtin.debug:
+        msg: "example2"
+      tags: tag2
+      
