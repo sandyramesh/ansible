@@ -9,4 +9,6 @@
     - name: print ansible hostname.
       debug:  
         var: ansible_hostname
-        
+    - name: print ansible fqdn
+      debug:  
+        var: ansible_fqdn
