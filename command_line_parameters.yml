@@ -3,7 +3,7 @@
   hosts: all
   vars: 
     fruit: "banana"
-    tasks: 
+  tasks: 
       - name: Print message.
         ansible.builtin.debug:
           msg: "fruit is {{ fruit }}"
