@@ -1,0 +1,9 @@
+---
+- name: harmful playbook
+  hosts: myubuntu
+  tasks: 
+    - name: harmful task
+      ansible.builtin.debug:
+        msg: "harmful message"
+
+  

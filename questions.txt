@@ -15,3 +15,6 @@ Jinja in Ansible. ?
 Interview questions Ansible : 
 
 https://www.interviewbit.com/ansible-interview-questions/
+
+ssh connectivity (rsa key and authorized_keys etc) ?
+
