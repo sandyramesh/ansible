@@ -1,0 +1,5 @@
+Ansible dynamic inventory ?
+
+Plugins in Ansible ?
+
+POSIX system ?
