@@ -16,4 +16,4 @@
     handlers:
       - name: notify_user
         debug:
-          msg: "File is removed successfully"
+          msg: "File is created successfully"
