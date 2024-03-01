@@ -1,0 +1,12 @@
+#command vs shell
+---
+- name: command module demo.
+  hosts: all
+  tasks:
+    - name: check uptime.
+      command: uptime
+      register: command_output
+
+    - name: print uptime
+      ansible.builtin.debug:
+        msg: command_output.stdout_lines
