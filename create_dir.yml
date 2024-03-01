@@ -1,0 +1,19 @@
+---
+  - name: Create directory ramesh
+    hosts: myubuntu
+    tasks:
+      - name: Create directory task
+        file:
+          path: /tmp/ramesh
+          state: directory
+          mode: '0755'
+      - name: Remove file
+        file:
+          path: /tmp/sample.txt
+          state: touch
+        notify:
+          - notify_user
+    handlers:
+      - name: notify_user
+        debug:
+          msg: "File is removed successfully"

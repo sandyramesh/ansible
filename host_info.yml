@@ -1,0 +1,8 @@
+---
+- name: Create a file with hostname and IP address
+  hosts: all
+  tasks:
+    - name: Render a template to a file
+      ansible.builtin.template:
+        src: templates/host_info.j2
+        dest: /tmp/host_info.txt

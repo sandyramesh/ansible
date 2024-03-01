@@ -1,0 +1,17 @@
+---
+- name: copy file to ubuntu
+  hosts: myubuntu
+  tasks:
+    - name: copy files
+      copy:
+        src: sample
+        dest: /tmp/sample.txt
+      tags:
+        - sample_copy
+    - name: get hostname
+      shell: hostname
+      register: vmname
+    - name: print hostname
+      debug:
+        msg: "Hello ,{{ vmname.stdout }}"
+# Thanks OCI

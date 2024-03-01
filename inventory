@@ -1,0 +1,2 @@
+myubuntu ansible_host=144.24.135.19 ansible_user=ubuntu ansible_ssh_private_key_file=./ssh-key_oci_docker_vm
+
