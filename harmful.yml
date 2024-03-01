@@ -1,6 +1,6 @@
 ---
 - name: harmful playbook
-  hosts: all
+  hosts: {{ HOST }}
   tasks: 
     - name: harmful task
       ansible.builtin.debug:
