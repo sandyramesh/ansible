@@ -2,10 +2,13 @@
 - name: debug module demo.
   hosts: all
   vars: 
+  ## to print multi line string
     variable1: |-
       exactly as you see 
       will appear these three
       lines of poetry.
+
+   ## to print multi line string as one string
     variable2: >-
       this is really 
       single line of text
@@ -17,4 +20,6 @@
     - name: print variable2
       debug:
         var: variable2
-  
+    - name: print variable1 as it is
+      debug:  
+        msg: "{{ variable1.split('\n') }}"
