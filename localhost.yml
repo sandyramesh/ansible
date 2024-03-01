@@ -1,0 +1,11 @@
+#localhost
+--- 
+- name: localhost demo
+  hosts: localhost
+  vars:
+    ansible_connection: local
+    ansible_python_interpretor: "{{ ansible_playbook_python }}"
+  tasks:  
+    - name: print hostname
+      ansible.builtin.debug:
+        msg: "{{ inventory_hostname }}"
