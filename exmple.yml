@@ -3,8 +3,24 @@
   hosts: all
   vars:
     myvar: "example text"
-  
+    mybool: true
+    mycities:
+      - Vizag
+      - Hyderabad
   tasks:
     - name: print var
       ansible.builtin.debug:
         msg: "Value {{ myvar }}"
+      notify: reload
+    - name: condition
+      ansible.builtin.debug:
+        msg: "example condition"
+      when: mybool
+    - name: print cities
+      ansible.builtin.debug:
+        var: item
+      loop: "{{ mycities }}"
+  handlers:
+    - name: reload
+      ansible.builtin.debug:
+        msg: "example handler"
