@@ -10,3 +10,4 @@
     - name: print message
       ansible.builtin.debug:
         msg: "My fruit is {{ fruit }}"
+        verbosity: 2
