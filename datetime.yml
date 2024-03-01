@@ -9,3 +9,6 @@
     - name: ISO8601
       debug:
         var: ansible_date_time.iso8601
+    - name: Print date
+      debug:
+        var: ansible_date_time.date
