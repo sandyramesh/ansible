@@ -1,0 +1,12 @@
+---
+- name: copy module demo.
+  hosts: all
+  vars: 
+    fruit: "banana"
+    output: "output.txt"
+  tasks:  
+    - name: write to file
+      template:
+        src: "mytemplate.j2"
+        dest: "{{ output }}"
+        
