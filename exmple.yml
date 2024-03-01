@@ -1,0 +1,10 @@
+---
+- name: Exmaple playbook
+  hosts: all
+  vars:
+    myvar: "example text"
+  
+  tasks:
+    - name: print var
+      ansible.builtin.debug:
+        msg: "Value {{ myvar }}"
