@@ -5,7 +5,7 @@
   tasks: 
     - name: all features
       ansible.builtin.debug:
-        var: 'ansible_facts.eth1.features'
+        var: 'ansible_facts.ens3.features'
     - name: filter enabled.
       ansible.builtin.debug:
-        msg: "{{ (ansible_facts.eth1.feautres | dict2items | selectattr('value','match','on')) }}"       
+        msg: "{{ (ansible_facts.ens3.feautres | dict2items | selectattr('value','match','on')) }}"       
