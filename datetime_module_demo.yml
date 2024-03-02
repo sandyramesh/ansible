@@ -5,10 +5,10 @@
   tasks:
     - name: date and time
       debug:
-        msg: "{{ lookup('pipe','date + %Y-%m-%d@$H:%M:%S') }}"
+        msg: "{{ lookup('pipe','date +%Y-%m-%d@$H:%M:%S') }}"
     - name: ISO8601 manual
       debug:
-        msg: "{{ lookup('pipe','date + %Y-%m-%dT%H:%M:%S%z') }}"
+        msg: "{{ lookup('pipe','date +%Y-%m-%dT%H:%M:%S%z') }}"
     - name: date and time
       debug:
         msg: "{{ lookup('pipe','date --iso8601=seconds) }}"
