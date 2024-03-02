@@ -7,7 +7,7 @@
       notify: message 1
     
     - name: flush
-      meta: "flush handlers"
+      meta: "flush_handlers"
     - name: message 2
       debug:
         msg: message 2
