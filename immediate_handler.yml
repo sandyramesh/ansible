@@ -5,6 +5,9 @@
     - name: changed status
       command: "uptime"
       notify: message 1
+    
+    - name: flush
+      meta: "flush handlers"
     - name: message 2
       debug:
         msg: message 2
