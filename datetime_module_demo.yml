@@ -12,4 +12,4 @@
     - name: date and time
       debug:
         msg: "{{ lookup('pipe','date --iso8601=seconds) }}"
-      ignore_erros: true
+      ignore_errors: true
