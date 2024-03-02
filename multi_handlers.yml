@@ -20,7 +20,6 @@
         msg: message 2
       listen: message
 
----
 - name: handler demo2
   hosts: all
   tasks:  
