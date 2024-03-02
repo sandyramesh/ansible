@@ -1,4 +1,5 @@
 ---
+# Play 1
 - name: handler demo
   hosts: all
   tasks:  
@@ -19,7 +20,7 @@
       debug:
         msg: message 2
       listen: message
-
+# Play 2
 - name: handler demo2
   hosts: all
   tasks:  
