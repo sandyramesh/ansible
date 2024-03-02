@@ -9,8 +9,7 @@
     - name: message 2
       debug:
         msg: message 2
-
-    
+       
   handlers:
     - name: message 1
       debug:
@@ -20,3 +19,24 @@
       debug:
         msg: message 2
       listen: message
+
+---
+- name: handler demo2
+  hosts: all
+  tasks:  
+    - name: changed status
+      command: "uptime"
+      notify: 
+        - message 3
+        - message 4 
+    - name: message 5
+      debug:
+        msg: message 5
+       
+  handlers:
+    - name: message 3
+      debug:
+        msg: message 3
+    - name: message 4
+      debug:
+        msg: message 4
