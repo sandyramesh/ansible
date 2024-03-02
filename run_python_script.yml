@@ -7,13 +7,13 @@
         executable: python3
         cmd: cars.py
       register: cars_raw_output
-    - name: print cars_list
+    - name: print cars_raw_output
       debug:
-        var: cars_list
+        var: cars_raw_output
       verbosity: 2
     - name: Convert output to JSON
       ansible.builtin.set_fact:
         cars_list: "{{ cars_raw_output.stdout | from_json }}"
-    - name: print cars_list
+    - name: print cars list
       debug:
         var: cars_list
