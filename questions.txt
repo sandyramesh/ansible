@@ -19,3 +19,7 @@ https://www.interviewbit.com/ansible-interview-questions/
 ssh connectivity (rsa key and authorized_keys etc) ?
 
 check the dry run in Ansible tower.?
+
+what is collections in Ansible ?
+
+what are the plugins ?
