@@ -1,0 +1,22 @@
+---
+- name: handler demo
+  hosts: all
+  tasks:  
+    - name: changed status
+      command: "uptime"
+      notify: message
+    
+    - name: message 2
+      debug:
+        msg: message 2
+
+    
+  handlers:
+    - name: message 1
+      debug:
+        msg: message 1
+      listen: message
+    - name: message 2
+      debug:
+        msg: message 2
+      listen: message
