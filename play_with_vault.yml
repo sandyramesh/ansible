@@ -1,0 +1,10 @@
+--- 
+- name: Ansible Vault
+  hosts: all
+  tasks: 
+    - name: include password file.
+      ansible.builtin.include_vars:
+        file: plan_to_encrypt.yml
+    - name: Print Password
+      ansible.builtin.debug:
+        msg: "{{ password }}"
